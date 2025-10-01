@@ -4,4 +4,4 @@
   tasks:
     - name: "checking variables form inventory files"
       ansible.builtin.debug:
-        msg: "Roles is {{ Role }} location is {{ location }} and company is {{ company }}"
+        msg: "Role is {{ Role }} location is {{ Location }} and company is {{ company }}"
