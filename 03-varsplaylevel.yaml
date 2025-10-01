@@ -1,0 +1,11 @@
+- name: variables play-level
+  hosts: local
+  connection: local
+  vars:
+    Role: "AWS DevOps Engineer"
+    Location: "Hyderabad"
+    company: "Infosys"
+  tasks:
+    ansible.builtin.debug:
+      msg: "Role is {{ Role }} , location is {{ Location }} , and company is {{ company }}"
+        
