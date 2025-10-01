@@ -5,10 +5,10 @@
   #   Name: from play-level
   # vars_files:
   # - info.yaml
-  vars_prompt:
-  - name: Name
-    prompt: please enter your name
-    private: true
+  # vars_prompt:
+  # - name: Name
+  #   prompt: please enter your name
+  #   private: true
   tasks:
     - name: "checking variable preferences"
       # vars:
