@@ -1,0 +1,11 @@
+- name: "working on loops"
+  hosts: "local"
+  connection: "local"
+  tasks:
+    - name: "checking loops"
+      ansible.builtin.debug:
+        msg: I know "{{ item }}"
+      loop:
+      - Modi
+      - Trump
+      - Putin
