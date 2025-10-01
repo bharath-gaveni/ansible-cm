@@ -1,0 +1,14 @@
+- name: "task-level variables"
+  hosts: "local"
+  connection: "local"
+  vars:
+    Role: AWS DevOps Engineer
+    Location: Hyderabad
+    company: Infosys
+  tasks:
+    - name: "checking task-level variables"
+      vars:
+        Role: Azure DevOps Engineer
+      ansible.builtin.debug:
+        msg: "Role is {{ Role }} , location is {{ Location }} and company is {{ Infosys }}"
+            
