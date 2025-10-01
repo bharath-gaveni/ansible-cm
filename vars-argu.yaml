@@ -1,0 +1,8 @@
+- name: "Variables through aruguments"
+  hosts: "local"
+  connection: "local"
+  tasks:
+    - name: "checking the variables through Aruguments"
+      ansible.builtin.debug:
+        msg: "Roles is {{ Role }} location is {{ Location }} and company is {{ company }}"
+        
