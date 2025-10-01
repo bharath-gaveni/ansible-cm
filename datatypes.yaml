@@ -1,0 +1,25 @@
+- name: "Datatypes"
+  hosts: "local"
+  connection: "local"
+  vars:
+    Name: "Bharath" # string
+    Age: 25 # integer
+    is_working: "true" # Boolean
+    skills: # list
+    - AWS
+    - ansible
+    - terraform
+    concepts: # dictory key value pair
+      cloud: "AWS"
+      CM: "Ansible"
+
+  tasks:
+    - name: "Datatypes"
+      ansible.builtin.debug:
+        msg: "name is {{ Name }}, Age is {{ Age }}, he is working {{ is_working }}, skills {{ skills }}, concepts {{ concepts }}"
+
+        #list []
+        #Dictionary {}
+        
+
+    
