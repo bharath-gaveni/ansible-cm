@@ -6,6 +6,6 @@
     Location: "Hyderabad"
     company: "Infosys"
   tasks:
-    name: "checking for play-level variables"
-    ansible.builtin.debug:
+    - name: "checking the play-level variables"
+      ansible.builtin.debug:
       msg: "Role is {{ Role }} , location is {{ Location }} , and company is {{ company }}"
