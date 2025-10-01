@@ -10,5 +10,4 @@
       vars:
         Role: Azure DevOps Engineer
       ansible.builtin.debug:
-        msg: "Role is {{ Role }} , location is {{ Location }} and company is {{ Infosys }}"
-            
+        msg: "Role is {{ Role }} , location is {{ Location }} and company is {{ company }}"
