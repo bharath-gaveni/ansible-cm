@@ -8,4 +8,4 @@
   tasks:
     - name: "checking the play-level variables"
       ansible.builtin.debug:
-      msg: "Role is {{ Role }} , location is {{ Location }} , and company is {{ company }}"
+        msg: "Role is {{ Role }} , location is {{ Location }} , and company is {{ company }}"
