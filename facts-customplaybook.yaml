@@ -1,0 +1,20 @@
+- name: "check the facts"
+  hosts: "local"
+  connection: "local"
+  tasks:
+    - name: "install nginx if RedHat"
+      ansible.builtin.dnf:
+        name: "nginx"
+        state: "present"
+      where: ansible_os_family == "RedHat"
+
+    - name: "install nginx if ubuntu"
+      ansible.builtin.apt:
+        name: "nginx"
+        state: "present"
+      when: ansible_os_family == "Debian"
+      
+          
+
+
+
