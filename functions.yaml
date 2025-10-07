@@ -3,15 +3,15 @@
   connection: "local"
   become: yes
   vars:
-    # technologies: AWS ,java ,mysql #string
-    # name: "Bharath kumar G"
-    # gmail: "bharath@gmail.com"
-    # phno: "9876543210"
+    technologies: AWS ,java ,mysql #string
+    name: "Bharath kumar G"
+    gmail: "bharath@gmail.com"
+    phno: "9876543210"
 
-    # technologies:
-    # - java
-    # - AWS
-    # - just
+    technologiess:
+    - java
+    - AWS
+    - just
     tags:
       Application: payment
       Environment: dev
@@ -36,8 +36,8 @@
 
   - name: "list to dic" 
     ansible.builtin.debug:
-      msg: "{{ technologies | items2dict }}"
-      
+      msg: "{{ technologiess | items2dict }}"
+
 
 
 
