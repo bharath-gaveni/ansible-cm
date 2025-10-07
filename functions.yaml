@@ -41,8 +41,9 @@
 
   - name: grep for root
     #ansible.builtin.command: cat /etc/passwd | grep root
-    ansible.builtin.shell: cat /etc/passwd | grep root
+    ansible.builtin.command: cat /etc/passwd | grep root
     register: command_output
+    ignore_errors: true
 
   - name: "print the command_output variable"
     ansible.builtin.debug:
@@ -50,7 +51,7 @@
 
 
   - name: "redirect the ouput"
-    ansible.builtin.command: ls -ltr > /tmp/ouput.txt
+    ansible.builtin.shell: ls -ltr > /tmp/ouput.txt
     register: output
 
   - name: "print the output"     
