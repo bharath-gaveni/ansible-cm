@@ -1,11 +1,13 @@
-- name: "working on loops"
+- name: "checking the loop in ansible"
   hosts: "local"
   connection: "local"
+  become: "yes"
   tasks:
-    - name: "checking loops"
-      ansible.builtin.debug:
-        msg: "I know {{ item }}"
-      loop:
-      - Modi
-      - Trump
-      - Putin
+  - name: "printing the simple loop"
+    ansible.builtin.debug:
+      msg: "DevOps with {{ item }}"
+    loop:
+    - AWS
+    - Azure
+    - GCP
+      
