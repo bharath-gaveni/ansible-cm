@@ -1,13 +1,23 @@
-- name: "installing packages using loops"
+- name: "installing the packages using loop with different states"
   hosts: "local"
   connection: "local"
   become: yes
   tasks:
-    - name: "installing packages using loops"
-      ansible.builtin.package:
-        name: "{{ item.name }}"
-        state: "{{ item.state }}"
-      loop:
-      - { name: "nginx", state: "absent" }
-      - { name: "mysql", state: "absent" }
-      - { name: "zip", state: "present" }   
+  - name: "printing the packages using loops this is task under play"
+    ansible.builtin.package:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop:
+    - { name: "nginx",state: "present" }
+    - { name: "zip", state: "absent" }
+    - {name: "mysql-server", state: "absent" }
+
+
+#whenever we take a value to the loop we use keyword item
+# loop: defines the repetition.
+
+# item represents each element.
+
+# item.name and item.state extract the current element’s fields.
+
+# state: is a module argument — it just happens to take its value from inside item.
