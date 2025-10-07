@@ -3,10 +3,10 @@
   connection: "local"
   become: yes
   vars:
-    technologies: AWS ,java ,mysql #string
-    name: "Bharath kumar G"
-    gmail: "bharath@gmail.com"
-    phno: "9876543210"
+    # technologies: AWS ,java ,mysql #string
+    # name: "Bharath kumar G"
+    # gmail: "bharath@gmail.com"
+    # phno: "9876543210"
 
     # technologies:
     # - java
@@ -26,13 +26,18 @@
     ansible.builtin.debug:
      msg: "{{ dakati | default('mahesh') }}"  
 
-  - name: "split list to string"
+  - name: "split string to list"
     ansible.builtin.debug:
       msg: "{{ technologies | split(',') }}"   
 
   - name: "convert dic to list"
     ansible.builtin.debug:
-      msg: "{{ tags | dict2items }}"   
+      msg: "{{ tags | dict2items }}" 
+
+  - name: "list to dic" 
+    ansible.builtin.debug:
+      msg: "{{ technologies | items2dict }}"
+      
 
 
 
