@@ -1,16 +1,15 @@
-- name: "varibales from prompt"
+- name: "checking varibles from prompt"
   hosts: "local"
   connection: "local"
+  become: "yes"
   vars_prompt:
-    - name: username
-      prompt: What is your username?
+    - name: role
+      prompt: What is your role?
       private: false
 
-    - name: password
-      prompt: What is your password?
-      private: true
+    - name: location
+      prompt: What is your location?
   tasks:
-    - name: "checking prompt variables"
-      ansible.builtin.debug:
-        msg: "username is {{ username }}, and password is {{ password }}"
-        
+  - name: "printing variables from prompt this is task under play"
+    ansible.builtin.debug:
+      msg: "Role is {{ role }} and location is {{ location }}"
