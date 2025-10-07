@@ -46,7 +46,7 @@
 
   - name: "print the command_output variable"
     ansible.builtin.debug:
-      msg: {{ command_output }}
+      msg: "{{ command_output }}"
 
 
 
