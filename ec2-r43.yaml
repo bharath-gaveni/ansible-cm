@@ -1,0 +1,24 @@
+- name: "creating ec2-instances"
+  hosts: "local"
+  connection: "local"
+  become: yes
+  vars:
+    ami_id: ami-09c813fb71547fc4f
+    sg_id: sg-0e84bdd3fbd61aac4 # replace with your SG ID
+    zone_id: "Z00567342XXYQ4M01AREL" # replace with your ID
+    domain_name: "bharathgaveni.fun"
+  tasks:
+  - name: creating ec2-instances
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      instance_type: t3.micro
+      security_group: "{{ sg_id }}"
+      image_id: "{{ ami_id }}"
+    tags:
+      Name: "{{ item }}"
+    loop: "{{ instances }}"  # we can pass instances variable dynamically using -e instances="mongodb,redis"
+    register: ec2-output
+
+  - name: printing the output of ec2
+    ansible.builtin.debug:
+      msg: "{{ ec2-output }}"
