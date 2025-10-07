@@ -30,6 +30,10 @@
     ansible.builtin.debug:
       msg: "{{ technologies | split(',') }}"   
 
+  - name: "convert dic to list"
+    ansible.builtin.debug:
+      msg: "{{ tags | dict2items }}"   
+
 
 
 
