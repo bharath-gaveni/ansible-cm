@@ -1,0 +1,31 @@
+- name: functions
+  hosts: "local"
+  connection: "local"
+  become: yes
+  vars:
+    technologies: AWS ,java ,mysql #string
+    name: "Bharath kumar G"
+    gmail: "bharath@gmail.com"
+    phno: "9876543210"
+
+    technologies:
+    - java
+    - AWS
+    - just
+    tags:
+      Application: payment
+      Environment: dev
+
+    listtags: #listDIC
+    - key: Application
+      value: payment
+    - key: Environment
+      value: dev
+  tasks:
+  - name: "default variables"
+    ansible.builtin.debug:
+     msg: "{{ name }}"    
+
+
+
+
