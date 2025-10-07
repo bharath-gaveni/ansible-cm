@@ -28,7 +28,7 @@
 
   - name: "split list to string"
     ansible.builtin.debug:
-      msg: "{{ technologies | split(,) }}"   
+      msg: "{{ technologies | split(',') }}"   
 
 
 
