@@ -15,6 +15,6 @@
     vars:
       location: "from task-level"
     ansible.builtin.debug:
-      msg: "location is {{{ location }}}"
-       
+      msg: "location is {{ location }}"
+
     
