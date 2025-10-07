@@ -13,3 +13,8 @@
   - name: "printing the user output"
     ansible.builtin.debug:
       msg: "{{ output }}"
+
+  - name: "adding user based on condition"
+    ansible.builtin.command: useradd roboshop
+    when: ouput.rc!=0 
+
