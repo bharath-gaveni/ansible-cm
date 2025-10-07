@@ -1,13 +1,14 @@
-- name: "installing packages using loop"
+- name: "installing packages using simple loop"
   hosts: "local"
   connection: "local"
-  become: yes
   tasks:
-    - name: "installing packages using loops"
-      ansible.builtin.package:
-        name: "{{ item }}"
-        state: "present"
-      loop:
-      - nginx
-      - mysql
-      - zip
+  - name: "installing packages using loop - this task under play"
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: "present"
+    loop:
+    - nginx
+    - zip
+    - mysql-server
+
+
