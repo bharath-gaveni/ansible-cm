@@ -8,15 +8,13 @@
     zone_id: "Z00567342XXYQ4M01AREL" # replace with your ID
     domain_name: "bharathgaveni.fun"
   tasks:
-  - name: creating ec2-instances
+  - name: create ec2 instance
     amazon.aws.ec2_instance:
       name: "{{ item }}"
       instance_type: t3.micro
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
-    loop: "{{ instances }}"  # we can pass instances variable dynamically using -e instances="mongodb,redis"
+      tags:
+        Name: "{{ item }}"
+    loop: "{{ instances }}"
     register: ec2_output
-
-  - name: printing the output of ec2
-    ansible.builtin.debug:
-      msg: "{{ ec2_output }}"
