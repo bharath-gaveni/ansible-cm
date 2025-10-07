@@ -1,7 +1,7 @@
-- name: "varaibles from inventory file"
+- name: "checking varables from inventory file"
   hosts: "local"
   connection: "local"
   tasks:
-    - name: "checking variables form inventory files"
-      ansible.builtin.debug:
-        msg: "Role is {{ Role }} location is {{ Location }} and company is {{ company }}"
+  - name: "printing the varaibles from inventory file this is task under the play"
+    ansible.builtin.debug:
+      msg: "role is {{ role }} and location is {{ location }}"
