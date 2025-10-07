@@ -1,0 +1,8 @@
+- name: "checking variables using command line dynamically"
+  hosts: "local"
+  connection: "local"
+  tasks:
+  - name: "printing variables using command line dynalically this is task under play"
+    ansible.builtin.debug:
+      msg: "Role is {{ role }} and location is {{ location }}"
+      
