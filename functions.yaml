@@ -50,7 +50,7 @@
 
 
   - name: "redirect the ouput"
-    ansible.builtin.shell: ls -ltr > /tmp/ouput.txt
+    ansible.builtin.command: ls -ltr > /tmp/ouput.txt
     register: output
 
   - name: "print the output"     
