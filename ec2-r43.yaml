@@ -14,8 +14,6 @@
       instance_type: t3.micro
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
-    tags:
-      Name: "{{ item }}"
     loop: "{{ instances }}"  # we can pass instances variable dynamically using -e instances="mongodb,redis"
     register: ec2-output
 
