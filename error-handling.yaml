@@ -16,5 +16,5 @@
 
   - name: "adding user based on condition"
     ansible.builtin.command: useradd roboshop
-    when: ouput.rc !=0 
+    when: output.rc!=0 
 
