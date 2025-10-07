@@ -1,5 +1,4 @@
-Role: "Aws DevOps Engineer"
-Location: "Hyderabad"
+role: "DevOps with AWS"
+location: "from info.yaml file"
 company: "Infosys"
-Name: "from file"
 

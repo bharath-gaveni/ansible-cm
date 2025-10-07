@@ -1,10 +1,11 @@
-- name: "Varaibles from files means loading file in return we can access the variables"
+- name: "varaibles from the file"
   hosts: "local"
   connection: "local"
+  become: yes
   vars_files:
   - info.yaml
   tasks:
-    - name: "checking varaibles from files"
-      ansible.builtin.debug:
-        msg: "Role is {{ Role }}, location is {{ Location }}, and company is {{ company }}"
+  - name: "printing variables from the file"
+    ansible.builtin.debug:
+      msg: "Role is {{ role }} location is {{ location }} and company is {{ company }}"  
 
