@@ -5,10 +5,11 @@
   vars_prompt:
     - name: role
       prompt: What is your role?
-      private: false
+      private: true
 
     - name: location
       prompt: What is your location?
+      private: false
   tasks:
   - name: "printing variables from prompt this is task under play"
     ansible.builtin.debug:
