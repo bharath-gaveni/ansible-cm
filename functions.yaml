@@ -24,7 +24,7 @@
   tasks:
   - name: "default variables"
     ansible.builtin.debug:
-     msg: "{{ dakati | default=('mahesh')}}"    
+     msg: "{{ dakati | default=('mahesh') }}"    
 
 
 
