@@ -9,8 +9,8 @@
       state: "{{ item.state }}"
     loop:
     - { name: "nginx",state: "present" }
-    - { name: "zip", state: "absent" }
-    - {name: "mysql-server", state: "absent" }
+    - { name: "zip",state: "absent" }
+    - {name: "mysql-server",state: "absent" }
 
 
 #whenever we take a value to the loop we use keyword item
