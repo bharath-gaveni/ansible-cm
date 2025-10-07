@@ -1,0 +1,14 @@
+- name: "error handaling"
+  hosts: "local"
+  connection: "local"
+  become: yes
+  tasks:
+  - name: "checking user"
+    ansible.builtin.command: id roboshop
+    register: output
+    #ignore_errors: true
+
+
+  - name: "printing the user output"
+    ansible.builtin.debug:
+      msg: "{{ output }}"
