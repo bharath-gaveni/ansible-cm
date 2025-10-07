@@ -5,9 +5,9 @@
   tasks:
   - name: "printing the simple loop"
     ansible.builtin.debug:
-      msg: "DevOps with {{ item }}"
+      msg: DevOps with {{ item }}
     loop:
     - AWS
     - Azure
     - GCP
-      
+
