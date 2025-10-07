@@ -8,10 +8,10 @@
     gmail: "bharath@gmail.com"
     phno: "9876543210"
 
-    technologies:
-    - java
-    - AWS
-    - just
+    # technologies:
+    # - java
+    # - AWS
+    # - just
     tags:
       Application: payment
       Environment: dev
