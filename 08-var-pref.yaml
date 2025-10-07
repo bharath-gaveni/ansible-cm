@@ -12,8 +12,8 @@
       private: true
   tasks:
   - name: "printing variable preferences this task from play"
-    vars:
-      location: "from task-level"
+    # vars:
+    #   location: "from task-level"
     ansible.builtin.debug:
       msg: "location is {{ location }}"
 
