@@ -5,6 +5,7 @@
   tasks:
   - name: "printing the condition this is task under play"
     ansible.builtin.debug:
+    vars:
       number: 6
       msg: " {{ number }} is lessthan 10"
     when: number < 10 
