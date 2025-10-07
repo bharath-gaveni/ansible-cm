@@ -6,7 +6,6 @@
   - name: "checking user"
     ansible.builtin.command: id roboshop
     register: output
-    ignore_errors: true
     #ignore_errors: true
 
 
