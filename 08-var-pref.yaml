@@ -2,8 +2,8 @@
   hosts: "local"
   connection: "local"
   become: "yes"
-  vars:
-    location: "from play-level"
+  # vars:
+  #   location: "from play-level"
   # vars_files:
   # - info.yaml
   # vars_prompt:
