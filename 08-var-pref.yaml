@@ -1,17 +1,20 @@
-- name: "variables preferences"
+- name: "variable preferences"
   hosts: "local"
   connection: "local"
-  # vars:
-  #   Name: from play-level
-  # vars_files:
-  # - info.yaml
-  # vars_prompt:
-  # - name: Name
-  #   prompt: please enter your name
-  #   private: true
+  become: "yes"
+  vars:
+    location: "from play-level"
+  vars_files:
+  - info.yaml
+  vars_prompt:
+    - name: location
+      prompt: What is your location?
+      private: true
   tasks:
-    - name: "checking variable preferences"
-      # vars:
-      #   Name: from task-level
-      ansible.builtin.debug:
-        msg: name is {{ Name }}
+  - name: "printing variable preferences this task from play"
+    vars:
+      location: "from task-level"
+    ansible.builtin.debug:
+      msg: "location is {{{ location }}}"
+       
+    

@@ -1,4 +1,5 @@
-role: "DevOps with AWS"
-location: "from info.yaml file"
-company: "Infosys"
+# role: "DevOps with AWS"
+# location: "from info.yaml file"
+# company: "Infosys"
+location: "info.yaml file"
 
