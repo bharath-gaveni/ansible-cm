@@ -1,11 +1,13 @@
-- name: variables play-level
-  hosts: local
-  connection: local
+- name: "variables at play-level"
+  hosts: "local"
+  connection: "local"
   vars:
-    Role: "AWS DevOps Engineer"
-    Location: "Hyderabad"
+    role: "DevOps with AWS"
+    location: "Hyderabad"
     company: "Infosys"
   tasks:
-    - name: "checking the play-level variables"
-      ansible.builtin.debug:
-        msg: "Role is {{ Role }} , location is {{ Location }} , and company is {{ company }}"
+  - name: "printing the play-level variables and this is task"
+    ansible.builtin.debug:
+      msg: "Role is {{ role }} Location is {{ location }} and company is {{ company }}"
+
+
