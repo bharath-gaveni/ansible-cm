@@ -36,7 +36,7 @@
 
   - name: "list to dic" 
     ansible.builtin.debug:
-      msg: "{{ technologiess | items2dict }}"
+      msg: "{{ listtags | items2dict }}"
 
 
 
