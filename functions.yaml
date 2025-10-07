@@ -24,7 +24,11 @@
   tasks:
   - name: "default variables"
     ansible.builtin.debug:
-     msg: "{{ dakati | default('mahesh') }}"    
+     msg: "{{ dakati | default('mahesh') }}"  
+
+  - name: "split list to string"
+    ansible.builtin.debug:
+      msg: "{{ technologies | split(,) }}"   
 
 
 
